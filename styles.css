@@ -1,0 +1,243 @@
+/* Spoke & Chain Co-op styles */
+
+:root {
+  --navy: #12355b;
+  --yellow: #ffc20e;
+  --light: #e3ebf3;
+  --text: #14202b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: #f7f9fb;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #0b4f9e;
+}
+
+/* Keyboard focus - visible outline on everything you can tab to */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 3px solid #0b4f9e;
+  outline-offset: 3px;
+}
+
+/* Skip link: hidden until it gets focus */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 10px;
+  background: var(--yellow);
+  color: var(--text);
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Header and navigation */
+header {
+  background: var(--navy);
+  color: #fff;
+  padding: 1rem;
+}
+
+.logo {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+
+header a:focus {
+  outline-color: var(--yellow);
+}
+
+/* Sections */
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.light-blue {
+  background: var(--light);
+  max-width: none;
+}
+
+.light-blue > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero */
+.hero {
+  background: var(--navy);
+  color: #fff;
+  max-width: none;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.hero img {
+  margin: 1.5rem auto 0;
+  max-width: 500px;
+}
+
+/* Buttons */
+.button,
+button {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+  background: #e0a800;
+}
+
+/* Service cards */
+article {
+  background: #fff;
+  border-left: 6px solid var(--yellow);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #999;
+}
+
+thead th {
+  background: var(--navy);
+  color: #fff;
+}
+
+/* Form */
+form {
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 2px solid #4a6178;
+  border-radius: 4px;
+}
+
+fieldset {
+  margin-top: 1rem;
+  border: 1px solid #4a6178;
+}
+
+fieldset label {
+  font-weight: normal;
+}
+
+small {
+  color: #33475b;
+}
+
+button {
+  margin-top: 1.5rem;
+  background: var(--navy);
+  color: #fff;
+}
+
+button:hover {
+  background: #0b2440;
+}
+
+/* Footer */
+footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+}
+
+/* Bigger screens */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 0;
+  }
+}
+
+/* Turn off smooth scrolling for people who prefer less motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

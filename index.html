@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Community bike repair workshop with walk-in repairs and monthly classes.">
+  <title>Spoke &amp; Chain Co-op | Community Bike Repair</title>
+
+  <!-- Critical CSS: just the styles for the header and hero so the top of the page shows up fast -->
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #14202b; background: #f7f9fb; }
+    header { background: #12355b; color: #fff; padding: 1rem; }
+    .hero { background: #12355b; color: #fff; padding: 2rem 1rem; }
+    .hero img { max-width: 100%; height: auto; }
+  </style>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip link for keyboard and screen reader users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <h1 class="logo">Spoke &amp; Chain Co-op</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Opening Hours</a></li>
+        <li><a href="#booking">Book a Workshop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div>
+        <h2>Fix your bike. Learn how it works.</h2>
+        <p>Volunteer mechanics help you repair your own bike. No appointment needed.</p>
+        <a class="button" href="#hours">See when we are open</a>
+      </div>
+      <img src="assets/hero-bike.svg" width="640" height="400"
+           alt="Drawing of a bicycle with yellow wheels on a dark blue background">
+    </section>
+
+    <section id="services">
+      <h2>What We Do</h2>
+      <article>
+        <h3>Walk-in Repair</h3>
+        <p>Bring your bike during open hours and a volunteer will show you how to fix it.</p>
+      </article>
+      <article>
+        <h3>Secondhand Parts</h3>
+        <p>Tyres, tubes, chains and brake pads at low prices.</p>
+      </article>
+      <article>
+        <h3>Free Safety Check</h3>
+        <p>A quick 15 minute check of your brakes, gears and tyres.</p>
+      </article>
+    </section>
+
+    <section id="hours" class="light-blue">
+      <h2>Opening Hours</h2>
+      <table>
+        <caption>Weekly opening hours</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Time</th>
+            <th scope="col">Session</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Tuesday</th><td>5pm - 8pm</td><td>Open repair night</td></tr>
+          <tr><th scope="row">Thursday</th><td>5pm - 8pm</td><td>Women and non-binary night</td></tr>
+          <tr><th scope="row">Saturday</th><td>10am - 3pm</td><td>Family repair day</td></tr>
+          <tr><th scope="row">Sunday</th><td>Closed</td><td>-</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="workshops">
+      <h2>Monthly Workshops</h2>
+      <img src="assets/workshop.svg" width="480" height="320" loading="lazy"
+           alt="Drawing of a wheel and a wrench on a workbench">
+      <p>Small groups of six with all tools provided. You can learn how to:</p>
+      <ul>
+        <li>Fix a puncture</li>
+        <li>Adjust brakes and gears</li>
+        <li>True a wheel</li>
+      </ul>
+    </section>
+
+    <section id="booking" class="light-blue">
+      <h2>Book a Workshop Place</h2>
+      <form action="#" method="post">
+        <p>Fields marked * are required.</p>
+
+        <label for="name">Full name *</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+
+        <label for="email">Email address *</label>
+        <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-help">
+        <small id="email-help">We only use this to confirm your place.</small>
+
+        <label for="workshop">Workshop *</label>
+        <select id="workshop" name="workshop" required>
+          <option value="">Choose a workshop</option>
+          <option>Fix a puncture</option>
+          <option>Adjust brakes and gears</option>
+          <option>True a wheel</option>
+        </select>
+
+        <fieldset>
+          <legend>Will you bring your own bike?</legend>
+          <label><input type="radio" name="bike" value="yes" checked> Yes</label>
+          <label><input type="radio" name="bike" value="no"> No, I need a loan bike</label>
+        </fieldset>
+
+        <button type="submit">Reserve my place</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Spoke &amp; Chain Co-op</p>
+    <p><a href="#main">Back to top</a></p>
+  </footer>
+</body>
+</html>
